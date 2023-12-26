@@ -1,0 +1,150 @@
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#form {
+    min-width: 30%;
+    max-width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+}
+
+#form .btn1 {
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    background: #16a085;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-control input {
+    border: none;
+    border-bottom: 1px solid #AAA;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    #form {
+        padding: 20px;
+    }
+
+}
+.password-wrap {
+position: relative;
+}
+#toggle-password {
+position: absolute;
+top: 40%;
+right: 10px;
+transform: translateY(-50%);
+background-color: transparent;
+border: none;
+cursor: pointer;
+}
+
+#toggle-password:focus {
+outline: none;
+}
+
+.fa-eye-slash:before {
+content: "\f070";
+}
+
+.fa-eye:before,
+.fa-eye-slash:before {
+font-size: 18px;
+color: #aaa;
+}
+
+#password[type="password"] + #toggle-password .fa-eye-slash:before {
+display: none;
+}
+
+#password:focus + #toggle-password .fa-eye:before {
+display: block;
+}
+
+#password:focus + #toggle-password .fa-eye-slash:before {
+display: block;
+}
+/* Style for radio buttons and labels */
+.radio1 {
+display: flex;
+flex-direction: column;
+}
+
+.radio1 .error {
+margin-top: 5px; /* Adjust margin as needed */
+}
+
+.radio1 input[type="radio"] {
+margin-right: 5px;
+/* Hide the actual radio button */
+display: none;
+}
+
+.radio1 input[type="radio"] + label:before {
+content: "";
+display: inline-block;
+width: 15px;
+height: 15px;
+vertical-align: middle;
+border: 2px solid #ccc;
+border-radius: 50%;
+margin-right: 5px;
+cursor: pointer;
+}
+
+.radio1 input[type="radio"]:checked + label:before {
+background-color: #336699; /* Change the color when selected */
+}

@@ -1,0 +1,161 @@
+.input-control {
+    display: flex;
+    align-items: center;
+}
+
+.radio-options {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Adjust label font size */
+}
+
+.radio-options label {
+    margin-right: 10px;
+}
+
+.radio-options input[type="radio"] {
+    display: none;
+}
+
+/* Style for the custom radio button */
+.radio-options label:before {
+    content: "";
+    display: inline-block;
+    width: 14px; /* Adjust width of the smaller radio button */
+    height: 14px; /* Adjust height of the smaller radio button */
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.radio-options input[type="radio"]:checked + label:before {
+    background-color: #336699; /* Change the color when selected */
+}
+
+.container1 {
+    height:500px; /* set container height to viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #AAA;
+    display: block;
+    width: 70%; /* change the width to 90% to make it responsive */
+    max-width: 400px; /* add a max-width to limit the width on larger screens */
+    padding: 40px;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 12px;
+  }
+  
+  input {
+    border: none;
+    border-bottom: 1px solid #AAA;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px; /* add margin to create space between inputs */
+  }
+  
+  
+  
+  @media screen and (min-width: 768px) {
+    /* apply these styles on screens with a minimum width of 768px (tablets and larger screens) */
+    form {
+      width: 50%;
+      padding: 50px;
+      font-size: 16px;
+    }
+  
+    input {
+      padding: 15px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+  
+  }
+  form .b1 {
+    display: flex;
+    justify-content: center;
+      padding: 10px;
+      width: 50%;
+    background: #16a085;
+    border: none;
+    border-radius: 10px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+  form .b2 {
+    font-size: 15px;
+    padding: 0px;
+    width: 50%;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    color:rgb(2, 112, 255);
+    font-family: 'Roboto', sans-serif;
+    transition: 0.1s ease;
+    cursor: pointer;
+  }
+  form .b2:hover{
+    color: black;
+  }
+  .password-wrap {
+    position: relative;
+  }
+  
+  #password {
+    padding-right: 10px; /* space for the toggle button */
+  }
+  
+  #toggle-password {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #toggle-password:focus {
+    outline: none;
+  }
+  
+  .fa-eye-slash:before {
+    content: "\f070";
+  }
+  
+  .fa-eye:before,
+  .fa-eye-slash:before {
+    font-size: 18px;
+    color: #aaa;
+  }
+  
+  #password[type="password"] + #toggle-password .fa-eye-slash:before {
+    display: none;
+  }
+  
+  #password:focus + #toggle-password .fa-eye:before {
+    display: block;
+  }
+  
+  #password:focus + #toggle-password .fa-eye-slash:before {
+    display: block;
+  }
+  
+  span{
+    color: red;
+    font-size: 12px;
+    padding: 0;
+  }
+
